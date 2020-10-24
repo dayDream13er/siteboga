@@ -44,3 +44,16 @@ $("#navbar-menu a").on('click',function(event){
 
 
 );
+var myHeading = document.querySelector('navbar-brand');
+
+function setUserName(){
+var myName = prompt('Введите ваше имя');
+localStorage.setItem('name', myName);
+myHeading.textContent = 'Добро пожаловать,' + ' ' + myName;
+}
+if(!localStorage.getItem('name')) {
+setUserName();
+} else {
+    var storedName = localStorage.getItem('name');
+    myHeading.textContent = 'Добро пожаловать' + storedName;
+}
