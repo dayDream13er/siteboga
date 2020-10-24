@@ -44,7 +44,7 @@ $("#navbar-menu a").on('click',function(event){
 
 
 );
-var myHeading = document.querySelector('navbar-brand');
+var myHeading = document.querySelector('a');
 
 function setUserName(){
 var myName = prompt('Введите ваше имя');
